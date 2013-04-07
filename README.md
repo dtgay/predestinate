@@ -1,4 +1,4 @@
 predestinate
 ============
 
-Python wrapper around xautomate because Python is disco super-fly.
+Python wrapper around xautomation because Python is disco super-fly.

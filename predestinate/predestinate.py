@@ -9,7 +9,8 @@ class XMouseGod(object):
         """Move the mouse pointer absolutely
         x: change in x
         y: change in y"""
-        subprocess.call(['xte', "xmousemove", str(x), str(y), "'"])
+        xte_command = "mousemove {} {}".format(x, y)
+        subprocess.call(["xte", xte_command])
 
     @classmethod
     def move_mouse_rel(cls, x, y):
@@ -17,4 +18,5 @@ class XMouseGod(object):
         x: change in x
         y: change in y
         (values can be negative)"""
-        subprocess.call(["xte", "'xmousermove", str(x), str(y), "'"])
+        xte_command = "mousermove {} {}".format(x, y)
+        subprocess.call(["xte", xte_command])

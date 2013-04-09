@@ -4,17 +4,20 @@ import subprocess # to run xautomation
 class MouseGod(object):
     """Can predestine the actions of the mouse."""
 
-    def move_mouse_abs(cls, x, y):
+    def __init__(self):
+        pass
+
+    def move_mouse_abs(self, x, y):
         """Move the mouse pointer absolutely
         x: change in x
         y: change in y"""
-        xte_command = "mousemove {} {}".format(x, y)
-        subprocess.call(["xte", xte_command])
+        self.xte_args = "mousemove {} {}".format(x, y)
+        subprocess.call(["xte", self.xte_args])
 
-    def move_mouse_rel(cls, x, y):
+    def move_mouse_rel(self, x, y):
         """Move the mouse pointer relatively
         x: change in x
         y: change in y
         (values can be negative)"""
-        xte_command = "mousermove {} {}".format(x, y)
-        subprocess.call(["xte", xte_command])
+        self.xte_args = "mousermove {} {}".format(x, y)
+        subprocess.call(["xte", self.xte_args])

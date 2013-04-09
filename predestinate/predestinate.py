@@ -1,7 +1,7 @@
 import subprocess # to run xautomation
 
 
-class XMouseGod(object):
+class MouseGod(object):
     """Can predestine the actions of the mouse."""
 
     @classmethod

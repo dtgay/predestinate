@@ -1,11 +1,23 @@
 import subprocess # to run xautomation
 
 
-class MouseGod(object):
-    """Can predestine the actions of the mouse."""
+class XGod(object):
+    """Base class for all god objects."""
 
     def __init__(self):
         pass
+
+    def usleep(self, i):
+        """Wait for i microseconds"""
+        self.xte_args = "usleep {}".format(i)
+        subprocess.call(["xte", self.xte_args])
+
+
+class MouseGod(XGod):
+    """Can predestine the actions of the mouse."""
+
+    def __init__(self, *args, **kwargs):
+        super(MouseGod, self).__init__(*args, **kwargs)
 
     def move(self, x, y, relative=False):
         """Move the mouse pointer. Default is absolute coords.
@@ -39,11 +51,11 @@ class MouseGod(object):
         subprocess.call(["xte", self.xte_args])
 
 
-class KeyGod(object):
+class KeyGod(XGod):
     """Can predestine the actions of the keyboard."""
 
     def __init__(self):
-        pass
+        super(KeyGod, self).__init__(*args, **kwargs)
 
     def key(self, key):
         """Press and release a key.

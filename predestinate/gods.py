@@ -7,20 +7,17 @@ class MouseGod(object):
     def __init__(self):
         pass
 
-    def move_mouse_abs(self, x, y):
-        """Move the mouse pointer absolutely.
-        x: change in x
-        y: change in y"""
-        self.xte_args = "mousemove {} {}".format(x, y)
-        subprocess.call(["xte", self.xte_args])
-
-    def move_mouse_rel(self, x, y):
-        """Move the mouse pointer relatively.
+    def move(self, x, y, relative=False):
+        """Move the mouse pointer. Default is absolute coords.
         x: change in x
         y: change in y
-        (values can be negative)"""
-        self.xte_args = "mousermove {} {}".format(x, y)
-        subprocess.call(["xte", self.xte_args])
+        relative: move mouse relative to its current position"""
+        if not relative:
+            self.xte_args = "mousemove {} {}".format(x, y)
+            subprocess.call(["xte", self.xte_args])
+        else:
+            self.xte_args = "mousermove {} {}".format(x, y)
+            subprocess.call(["xte", self.xte_args])
 
 
 class KeyGod(object):
@@ -45,4 +42,10 @@ class KeyGod(object):
         """Release a key.
         key: a string representing the key to release"""
         self.xte_args = "keyup {}".format(key)
+        subprocess.call(["xte", self.xte_args])
+
+    def key_str(self, string):
+        """Press and release each character in the string
+        string: the string of characters to press and release"""
+        self.xte_args = "str {}".format(string)
         subprocess.call(["xte", self.xte_args])

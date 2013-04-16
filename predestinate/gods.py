@@ -8,16 +8,29 @@ class MouseGod(object):
         pass
 
     def move_mouse_abs(self, x, y):
-        """Move the mouse pointer absolutely
+        """Move the mouse pointer absolutely.
         x: change in x
         y: change in y"""
         self.xte_args = "mousemove {} {}".format(x, y)
         subprocess.call(["xte", self.xte_args])
 
     def move_mouse_rel(self, x, y):
-        """Move the mouse pointer relatively
+        """Move the mouse pointer relatively.
         x: change in x
         y: change in y
         (values can be negative)"""
         self.xte_args = "mousermove {} {}".format(x, y)
+        subprocess.call(["xte", self.xte_args])
+
+
+class KeyGod(object):
+    """Can predestine the actions of the keyboard."""
+
+    def __init__(self):
+        pass
+
+    def key(self, key):
+        """Press and release a key.
+        key: a string representing the key to press"""
+        self.xte_args = "key {}".format(key)
         subprocess.call(["xte", self.xte_args])

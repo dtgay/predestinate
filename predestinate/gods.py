@@ -19,6 +19,15 @@ class MouseGod(object):
             self.xte_args = "mousermove {} {}".format(x, y)
             subprocess.call(["xte", self.xte_args])
 
+    def click(self, i):
+        """Click a mouse button.
+        i: the number of the button to press
+            1 - left mouse
+            2 - middle mouse
+            3 - right mouse"""
+        self.xte_args = "mouseclick {}".format(i)
+        subprocess.call(["xte", self.xte_args])
+
 
 class KeyGod(object):
     """Can predestine the actions of the keyboard."""

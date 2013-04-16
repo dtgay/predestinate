@@ -31,6 +31,18 @@ class KeyGod(object):
 
     def key(self, key):
         """Press and release a key.
-        key: a string representing the key to press"""
+        key: a string representing the key to press and release"""
         self.xte_args = "key {}".format(key)
+        subprocess.call(["xte", self.xte_args])
+
+    def key_down(self, key):
+        """Press a key down.
+        key: a string representing the key to press"""
+        self.xte_args = "keydown {}".format(key)
+        subprocess.call(["xte", self.xte_args])
+
+    def key_up(self, key):
+        """Release a key.
+        key: a string representing the key to release"""
+        self.xte_args = "keyup {}".format(key)
         subprocess.call(["xte", self.xte_args])

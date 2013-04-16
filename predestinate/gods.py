@@ -28,6 +28,16 @@ class MouseGod(object):
         self.xte_args = "mouseclick {}".format(i)
         subprocess.call(["xte", self.xte_args])
 
+    def click_down(self, i):
+        """Press mouse button i down"""
+        self.xte_args = "mousedown {}".format(i)
+        subprocess.call(["xte", self.xte_args])
+
+    def click_up(self, i):
+        """Release mouse button i"""
+        self.xte_args = "mouseup {}".format(i)
+        subprocess.call(["xte", self.xte_args])
+
 
 class KeyGod(object):
     """Can predestine the actions of the keyboard."""

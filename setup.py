@@ -11,14 +11,14 @@ version = "0.1.0"
 setup(
     name="predestinate",
     version=version,
-    description="Python wrapper around xautomation because Python is disco super-fly",
+    description="Script mouse and keyboard actions via xautomation in GNU/Linux",
     classifiers=[
         "Programming Language :: Python :: 2.7",
-        "Development Status :: 1 - Planning",
+        "Development Status :: 3 - Alpha",
         "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
         "Operating System :: Unix",
     ],
-    keywords="xautomation wrapper X",
+    keywords="xautomation wrapper X mouse keyboard scripting",
     author="David Gay",
     author_email="oddshocks@riseup.net",
     url="https://github.com/oddshocks/predestinate",

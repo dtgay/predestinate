@@ -1,6 +1,8 @@
 Predestinate
 ============
 
+:Author: David Gay <oddshocks@riseup.net>
+
 Python wrapper around xautomation because Python is disco super-fly.
 You can use this to script mouse and keyboard actions in GNU/Linux.
 

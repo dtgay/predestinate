@@ -19,11 +19,6 @@ You can install Predestinate from PyPI via pip like so::
 
     pip install predestinate
 
-**WARNING:** I have just discovered what may be a fatal bug which
-prevents installation via pip due to improper implementation of
-our distribute setup support. I am working on this ASAP, and have
-a ticket open: https://github.com/oddshocks/pythong/issues/19/.
-
 Usage
 -----
 

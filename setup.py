@@ -25,6 +25,9 @@ setup(
     license="GPLv3+",
     packages=find_packages(
     ),
+    scripts=[
+            "distribute_setup.py",
+            ],
     include_package_data=True,
     zip_safe=False,
     install_requires=[

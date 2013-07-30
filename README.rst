@@ -41,11 +41,11 @@ You can start using Predestinate quite easily like so:
 
     from predestinate import MouseGod
     mg = MouseGod()
-    mg.move(100, 200) # And much more!
+    mg.move(100, 200, relative=True) # And much more!
 
     from predestinate import KeyGod
     kg = KeyGod()
-    kg.key('Escape') # And much more!
+    kg.key_down('Escape') # And much more!
 
 
 I'll be expanding this documentation much more in the future,

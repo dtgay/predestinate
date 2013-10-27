@@ -54,7 +54,7 @@ class MouseGod(XGod):
 class KeyGod(XGod):
     """Can predestine the actions of the keyboard."""
 
-    def __init__(self):
+    def __init__(self, *args, **kwargs):
         super(KeyGod, self).__init__(*args, **kwargs)
 
     def key(self, key):

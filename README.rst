@@ -1,16 +1,15 @@
 Predestinate
 ============
 
-:Author: David Gay <oddshocks@riseup.net>
+:Author: David Gay <dgay@riseup.net>
 
-Python wrapper around xautomation because Python is disco super-fly.
+This is a Python wrapper around xautomation.
 You can use this to script mouse and keyboard actions in GNU/Linux.
 
 Requirements
 ------------
 
-This requires xautomation to be installed (duh this is a wrapper don't
-be a goofball).
+This requires xautomation to be installed.
 
 Installation
 ------------
@@ -23,13 +22,11 @@ Usage
 -----
 
 Predestinate has been used in my own tests to great effect, and was
-just implemented tonight (2013-07-25) to provide mouse movement
+implemented on 2013-07-25 to provide mouse movement
 with finger motions via the `LEAP Motion controller
 <https://www.leapmotion.com/>`_ by a hacker who goes by "dgonyeo".
 
-I'd like to spend more time on documentation and whatnot, but am
-under the weight of other projects at the moment. I *can* tell you
-that you can implement it quite easily by taking a quick look at
+You can implement Predestinate by taking a quick look at
 the code and comments to see what methods you can call. Looking
 at ``man xte`` can also be of great use, especially to get the
 names of keys. Remember, you *do* need to have ``xautomation``
@@ -49,12 +46,6 @@ You can start using Predestinate quite easily like so:
     kg = KeyGod()
     kg.key_down('Escape')
     # And much more!
-
-
-I'll be expanding this documentation much more in the future,
-especially as I complete my summer internship. Thanks for
-checking it out! Feel free to ask questions and open tickets
-for bugs and feature requests. I appreciate it. :)
 
 License
 -------

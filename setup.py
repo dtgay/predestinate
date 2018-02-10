@@ -20,8 +20,8 @@ setup(
     ],
     keywords="xautomation wrapper X mouse keyboard scripting",
     author="David Gay",
-    author_email="oddshocks@riseup.net",
-    url="https://github.com/oddshocks/predestinate",
+    author_email="dgay@riseup.net",
+    url="https://github.com/thedavidgay/predestinate",
     license="GPLv3+",
     packages=find_packages(
     ),

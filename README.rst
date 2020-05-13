@@ -1,10 +1,13 @@
 Predestinate
 ============
 
-:Author: David Gay <dgay@riseup.net>
+:Author: David Gay <hello@davidgay.org>
 
 This is a Python wrapper around xautomation.
 You can use this to script mouse and keyboard actions in GNU/Linux.
+
+⚠️ This project is no longer maintained. As of 2020, it hasn't been updated
+in six or seven years. Use at your own risk.
 
 Requirements
 ------------
